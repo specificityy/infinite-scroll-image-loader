@@ -55,6 +55,6 @@ This does not need to be perfect, but functional.
 
 We don’t put any time frame on the completion, but the sooner you complete the test, the sooner we can move forward in the hiring process, and, we hope, sooner we can make an offer to you.
 
-If you have any questions at all please contact iperez@policyexpert.co.uk and dfarr@policyexpert.co.uk and we will be happy to help.
+If you have any questions at all please contact [iperez@policyexpert.co.uk](mailto:iperez@policyexpert.co.uk) and [dfarr@policyexpert.co.uk](mailto:dfarr@policyexpert.co.uk) and we will be happy to help.
 
 Enjoy!
