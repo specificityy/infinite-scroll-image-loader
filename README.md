@@ -7,7 +7,7 @@ You are to deliver code that prices a supermarket shopping basket. Some items av
 - Three cans of beans for the price of two.
 - Two cans of Coke, for £1.
 
-Use the following example of a receipt to know what data needs to be captured. There is no requirement to actually format or print a receipt.
+Use the following example of a receipt to know what data needs to be captured.
 
 ```
 Beans                0.50
@@ -36,12 +36,12 @@ Total to Pay         2.40
 **What we want to see is the quality of your code, how you write your tests and what is your approach to resolving a problem**
 
 1. We use functional ES6 and that is our preferred coding style, but we do appreciate good OO code too.
-2. Feel free to use lodash-fp or ramda if that makes your code more readable.
-3. Use bootstrap, foundation or any other tool or framework of your choice, no need to reinvent the wheel.
+2. Feel free to use ``lodash-fp`` or ``ramda`` if that makes your code more readable.
+3. Use ``bootstrap`` or any other tool or framework of your choice for styling, no need to reinvent the wheel.
 4. We use RxJS, so there are bonus points if used.
-5. Show us how you write clean code.
+5. Show us how you write **clean** code.
 
-Please use TDD or BDD. It is very important to write `tests` that help us understand your design; what you think are the important business rules that are to be protected when changes come later.
+Please use TDD or BDD. It is very important to write *tests* that help us understand your design; what you think are the important business rules that are to be protected when changes come later.
 
 ## How to proceed
 1. Create a github account if you don't already have one. (it’s free)
