@@ -38,7 +38,7 @@ Total to Pay         2.40
 1. We use functional ES6 and that is our preferred coding style, but we do appreciate good OO code too.
 2. Feel free to use ``lodash-fp`` or ``ramda`` if that makes your code more readable.
 3. Use ``bootstrap`` or any other tool or framework of your choice for styling, no need to reinvent the wheel.
-4. We use RxJS, so there are bonus points if used.
+4. Use Redux or any other implementation of the flux architecture. We use RxJS, so there are bonus points if used.
 5. Show us how you write **clean** code.
 
 Please use TDD or BDD. It is very important to write *tests* that help us understand your design; what you think are the important business rules that are to be protected when changes come later.
