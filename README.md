@@ -49,7 +49,7 @@ Please use TDD or BDD. It is very important to write *tests* that help us unders
 3. Use your preferred build tool and testing framework.
 4. Add ``iperezqm`` and ``dominicfarr`` and as a contributors.
 5. Commit often, so we can see how you grow your code.
-6. When you are finished create a pull request for us to start the code review process.
+6. When you are finished create a pull request and assign it to ``iperezqm`` and ``dominicfarr`` for us to start the code review process.
 
 This does not need to be perfect, but functional.
 
