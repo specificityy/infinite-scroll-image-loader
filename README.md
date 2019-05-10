@@ -2,24 +2,25 @@
 
 ## The task
 
-Extend this app using redux-observable, so it retrieves the content from [this API](https://jsonplaceholder.typicode.com/photos) and then displays it.
+Use the provided project and extend it so it retrieves the content from [this API](https://jsonplaceholder.typicode.com/photos) and then displays it.
 
 For each entry we want to display:
 
 - The title of the album. It should open it on a new tab when clicked
-- A thumbnail for the album, BUT, instead of the thumbnail url we receive from the above call, display [a random cat from placekitten](https://placekitten.com/)
+- A thumbnail for the album, BUT, instead of the thumbnail url we receive from the above call, display [a random image from picsum](https://picsum.photos/) or [placekitten](https://placekitten.com/)
 
-We don't want to fetch the kitten images at once, they have to be retrieved as the page is scrolled down, [like this](https://infinite-scroll.com/demo/masonry/).
+We don't want to fetch all the images at once, they have to be retrieved as the page is scrolled down, [à la infinite-scroll](https://infinite-scroll.com/demo/masonry/).
 
 ## The rules
 
 1. Your solution needs to be submitted as a git repo.
+1. We want to see your RxJS skills, so please use `redux-observable`
 1. Commit early, commit often.
    Please understand that this is our only way of getting an idea of how your development process works.
    Your commits will give us an idea of how you approach *TDD*, how you write your tests, how you make them pass, how you refactor.
    Don't be ashamed of committing broken code, just commit every significant step in getting to your solution.
 1. Be as functional as you can. Feel free to use [lodash-fp](https://github.com/lodash/lodash/wiki/FP-Guide) or [ramda](https://ramdajs.com/). We use the former, but choice is yours.
-1. Your solution *must* be reasonably covered by tests.
+1. Your solution *must* be covered by tests.
 1. You can replace this README.md file and document any aspect of your solution as you see fit.
 1. Make it as beautiful as you want, but you we don't want you to spend too much time styling.
 
