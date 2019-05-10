@@ -13,7 +13,7 @@ We don't want to fetch all the images at once, they have to be retrieved as the 
 
 ## The rules
 
-1. Your solution needs to be submitted as a git repo.
+1. Your solution needs to be submitted as a git repo, so fork this project, and complete the tests and code in your fork. When it is finished, share the completed forked project for us to review. 
 1. We want to see your RxJS skills, so please use `redux-observable`
 1. Commit early, commit often.
    Please understand that this is our only way of getting an idea of how your development process works.
