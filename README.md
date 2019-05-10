@@ -1,60 +1,94 @@
-# Policy Expert - Home Code Assessment
+# PolicyExpert React Coding Assessment
 
-We value the ability to model problems in software, so our first assessment will be around that subject. The exercise is to model and code a simple supermarket pricing solution. It is inspired on Pragmatic Dave’s Supermarket Kata - http://codekata.com/kata/kata01-supermarket-pricing/.
+## The task
 
-You are to deliver code that prices a supermarket shopping basket. Some items available are based on price per item, some items are based on weight. There are also group discounts to be aware of:
+Extend this app using redux-observable, so it retrieves the content from [this API](https://jsonplaceholder.typicode.com/photos) and then displays it.
+For each entry we want to display:
 
-- Three cans of beans for the price of two.
-- Two cans of Coke, for £1.
+- The title of the album. It should open it on a new tab when clicked
+- A thumbnail for the album, BUT, instead of the thumbnail url we receive from the above call, display [a random cat from placekitten](https://placekitten.com/)
 
-Use the following example of a receipt to know what data needs to be captured.
+We don't want to fetch the kitten images at once, they have to be retrieved as the page is scrolled down.
 
-```
-Beans                0.50
-Beans                0.50
-Beans                0.50
-Coke                 0.70
-Coke                 0.70
-Oranges
-0.200 kg @  £1.99/kg 0.40
------
-Sub-total            3.30
+## The rules
 
-Savings
-Beans 3 for 2       -0.50
-Coke 2 for £1       -0.40
------
-Total savings       -0.90
--------------------------
-Total to Pay         2.40
-```
+1. Your solution needs to be submitted as a git repo.
+1. Commit early, commit often.
+   Please understand that this is our only way of getting an idea of how your development process works.
+   Your commits will give us an idea of how you approach TDD, how you write your tests, how you make them pass, how you refactor.
+   Don't be ashamed of committing broken code, just commit every significant step in getting to your solution.
+1. Be as functional as you can. Feel free to use [lodash-fp](https://github.com/lodash/lodash/wiki/FP-Guide) or [ramda](https://ramdajs.com/). We use the former, but choice is yours.
+1. Your solution *must* be reasonably covered by tests.
+1. You can replace this README.md file and document any aspect of your solution as you see fit.
+1. Make it as beautiful as you want, but you we don't want you to spend too much time styling.
 
-**Using ReactJS, implement a simple front-end that allows a user to add/remove items into a basket and have the basket total automatically updated based on item price and applicable discounts**
+## Other stuff
 
-**Keep it simple and to the point**
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-**What we want to see is the quality of your code, how you write your tests and what is your approach to resolving a problem**
+## Available Scripts
 
-1. We use functional ES6 and that is our preferred coding style, but we do appreciate good OO code too.
-2. Feel free to use ``lodash-fp`` or ``ramda`` if that makes your code more readable.
-3. Use ``bootstrap`` or any other tool or framework of your choice for styling, no need to reinvent the wheel.
-4. Use Redux or any other implementation of the flux architecture. We use RxJS, so there are bonus points if used.
-5. Show us how you write **clean** code.
+In the project directory, you can run:
 
-Please use TDD or BDD. It is very important to write *tests* that help us understand your design; what you think are the important business rules that are to be protected when changes come later.
+### `npm start`
 
-## How to proceed
-1. Create a github account if you don't already have one. (it’s free)
-2. Create a new project with ``README.md`` explaining what the project is doing, and how to build and run it.
-3. Use your preferred build tool and testing framework.
-4. Add ``iperezqm`` and ``dominicfarr`` and as a contributors.
-5. Commit often, so we can see how you grow your code.
-6. When you are finished create a pull request and assign it to ``iperezqm`` and ``dominicfarr`` for us to start the code review process.
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-This does not need to be perfect, but functional.
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-We don’t put any time frame on the completion, but the sooner you complete the test, the sooner we can move forward in the hiring process, and, we hope, sooner we can make an offer to you.
+### `npm test`
 
-If you have any questions at all please contact [iperez@policyexpert.co.uk](mailto:iperez@policyexpert.co.uk) and [dfarr@policyexpert.co.uk](mailto:dfarr@policyexpert.co.uk) and we will be happy to help.
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Enjoy!
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
