@@ -6,7 +6,7 @@ Use the provided project and extend it so it retrieves the content from [this AP
 
 For each entry we want to display:
 
-- The title of the album. It should open it on a new tab when clicked
+- The title of the album. It should display the corresponding image when clicked.
 - A thumbnail for the album, BUT, instead of the thumbnail url we receive from the above call, display [a random image from picsum](https://picsum.photos/) or [placekitten](https://placekitten.com/)
 
 We don't want to fetch all the images at once, they have to be retrieved as the page is scrolled down, [à la infinite-scroll](https://infinite-scroll.com/demo/masonry/).
