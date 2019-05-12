@@ -1,20 +1,15 @@
 import { ofType } from 'redux-observable';
-import { timer } from 'rxjs';
-import { mergeMap, map } from 'rxjs/operators';
+import { switchMap, map } from 'rxjs/operators';
+import { ajax } from 'rxjs/ajax';
 
-const setLink = link => ({ type: 'SET_LINK', link });
+const fetchImagesCompleted = response => ({ type: 'FETCH_IMAGES_COMPLETED', response });
 
-export const fetchMessages = action$ =>
+export const fetchImages = action$ =>
     action$.pipe(
-        ofType('FETCH'),
-        mergeMap(() =>
-            timer(5000).pipe(
-                map(() =>
-                    setLink({
-                        message: 'Read more about us',
-                        href: 'http://www.policyexpert.co.uk',
-                    }),
-                ),
+        ofType('FETCH_IMAGES'),
+        switchMap(() =>
+            ajax.getJSON('https://jsonplaceholder.typicode.com/photos').pipe(
+                map(fetchImagesCompleted),
             ),
         ),
     );

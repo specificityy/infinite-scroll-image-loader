@@ -1,35 +1,40 @@
 import React from 'react';
-import './App.css';
 import { connect } from 'react-redux';
 
-const Card = ({ card }) => {
+import './App.css';
+
+export const Thumbnail = ({ card: { title, id } }) => <img src={`https://picsum.photos/150/150?${id}`} alt={title} />;
+
+export const Card = ({ card, displayImageId, displayImage }) => {
+    const isDisplayImage = displayImageId === card.id;
     return (
-        <div className="card">
+        <div className={`card${isDisplayImage ? ' displayed' : ''}`} onClick={() => displayImage(card)}>
             <div className="title">{card.title}</div>
-            <img src={card.thumbnailUrl} alt={card.title} />
+            {isDisplayImage ? <img src={card.url} alt={card.title} /> : <Thumbnail card={card} />}
         </div>
     );
 };
 
-const Grid = ({ cards }) =>
-    cards.map(card => {
-        return <Card key={card.id} card={card} />;
-    });
-
-export const App = ({ cards }) => {
+export const App = ({ cards, fetchImages, displayImage, displayImageId }) => {
     return (
         <div className="App">
-            <Grid cards={cards} />
+            {cards.map(card => {
+                return <Card key={card.id} card={card} displayImage={displayImage} displayImageId={displayImageId} />;
+            })}
         </div>
     );
 };
 
-const mapStateToProps = state => ({
-    cards: state.cards,
+const mapStateToProps = ({ cards, displayImageId, fetchImages, displayImage }) => ({
+    cards,
+    displayImageId,
+    fetchImages,
+    displayImage,
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetch: () => dispatch({ type: 'FETCH' }),
+    fetchImages: () => dispatch({ type: 'FETCH_IMAGES' }),
+    displayImage: ({ id }) => dispatch({ type: 'DISPLAY_IMAGE', id }),
 });
 
 export default connect(
