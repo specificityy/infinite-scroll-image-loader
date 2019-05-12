@@ -1,9 +1,9 @@
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './reducers';
 import { createEpicMiddleware, combineEpics } from 'redux-observable';
-import fetchMessageEpic from './epics/fetchMessage';
+import epics from './epics';
 
-const rootEpic = combineEpics(fetchMessageEpic);
+const rootEpic = combineEpics(...Object.values(epics));
 const epicMiddleware = createEpicMiddleware();
 
 const store = createStore(rootReducer, applyMiddleware(epicMiddleware));

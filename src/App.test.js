@@ -1,9 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow, mount } from 'enzyme';
 import { App } from './App';
 
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<App message="test message" />, div);
-    ReactDOM.unmountComponentAtNode(div);
+describe('App', () => {
+    it('renders cards Grid', () => {
+        const wrapper = shallow(<App />);
+        expect(wrapper.find('Grid')).toHaveLength(1);
+    });
+
+    it('renders cards inside of Grid', () => {
+        const wrapper = mount(<App cards={[{ id: 1 }, { id: 2 }]} />);
+        expect(wrapper.find('Grid').find('Card')).toHaveLength(2);
+    });
 });

@@ -1,30 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
 
-export const App = ({ message, href, fetch }) => {
-    fetch && fetch();
+const Card = ({ card }) => {
+    return (
+        <div className="card">
+            <div className="title">{card.title}</div>
+            <img src={card.thumbnailUrl} alt={card.title} />
+        </div>
+    );
+};
 
+const Grid = ({ cards }) =>
+    cards.map(card => {
+        return <Card key={card.id} card={card} />;
+    });
+
+export const App = ({ cards }) => {
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <a className="App-link" href={href} target="_blank" rel="noopener noreferrer">
-                    {message}
-                </a>
-            </header>
+            <Grid cards={cards} />
         </div>
     );
 };
 
 const mapStateToProps = state => ({
-    message: state.message,
-    href: state.href,
+    cards: state.cards,
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetch: () => dispatch({ type: 'fetch' }),
+    fetch: () => dispatch({ type: 'FETCH' }),
 });
 
 export default connect(

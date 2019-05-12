@@ -1,3 +1,3 @@
 import reducers from './reducers';
 
-export default reducers;
+it('reducers', () => {});
