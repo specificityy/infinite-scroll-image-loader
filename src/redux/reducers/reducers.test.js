@@ -3,8 +3,13 @@ import reducers from './reducers';
 describe('Reducer', () => {
     describe('FETCH_IMAGES_COMPLETED', () => {
         it('appends response cards to state', () => {
-            expect(reducers({ cards: ['foo'] }, { type: 'FETCH_IMAGES_COMPLETED', response: ['bar'] })).toEqual({
+            expect(
+                reducers({ cards: ['foo'], pageIndex: 0, pageSize: 2 }, { type: 'FETCH_IMAGES_COMPLETED', response: ['bar'] }),
+            ).toEqual({
                 cards: ['foo', 'bar'],
+                pageIndex: 1,
+                pageSize: 2,
+                loading: false,
             });
         });
     });

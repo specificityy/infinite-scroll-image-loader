@@ -18,7 +18,7 @@ describe('App', () => {
                     .find(Thumbnail)
                     .find('img')
                     .prop('src'),
-            ).toBe('https://picsum.photos/150/150?' + card.prop('card').id),
+            ).toBe('https://picsum.photos/150/150?grayscale&' + card.prop('card').id),
         );
     });
 
@@ -45,6 +45,7 @@ describe('App', () => {
 
 const renderConnectedApp = () => {
     const store = require('./redux/store').default();
+
     const wrapper = mount(
         <Provider store={store}>
             <App />
